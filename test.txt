@@ -5,4 +5,5 @@ Test stash command
 
 Test rebase command
 Test rebase command -2
+Test rebase command -2
 
