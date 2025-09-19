@@ -40,6 +40,7 @@ public class Main {
         System.out.println(map.remove(75676));
         System.out.println(map.get(75676));
     }
+
 }
 
 

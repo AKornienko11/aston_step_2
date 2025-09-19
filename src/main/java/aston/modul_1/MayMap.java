@@ -1,6 +1,5 @@
 package aston.modul_1;
 
-
 public interface MayMap<K,V> extends Iterable<V> {
     boolean insert (K key, V value );
     boolean remove(K key);

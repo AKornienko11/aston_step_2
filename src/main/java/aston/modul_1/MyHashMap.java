@@ -1,6 +1,5 @@
 package aston.modul_1;
 
-
 import java.util.*;
 
 public class MyHashMap<K, V> implements MayMap<K, V> {
@@ -251,8 +250,9 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
 //        }
 
 
-        @Override
 
+
+        @Override
         public final int hashCode() {
             int hash = 31;
             hash = hash * 17 + key.hashCode();
@@ -261,8 +261,11 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         }
 
 
-//        @Override
-//        public boolean equals(Object o) {
+
+
+
+        @Override
+        public boolean equals(Object o) {
 //            if (this == o) return true;
 //            if (o instanceof Node) {
 //                Node<K, V> node = (Node) o;
@@ -270,9 +273,10 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
 //                        || Objects.equals(hash, node.hashCode());
 //
 //            }
-//            return false;
-//
-//        }
+            return false;
+
+        }
     }
+
 }
 
