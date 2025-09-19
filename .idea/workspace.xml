@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="MayHashMap">
-      <change afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="Initial project structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +150,49 @@
       <option name="project" value="LOCAL" />
       <updated>1758292910497</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="MayHashMap">
+      <created>1758293326341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293326341</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Initial project structure">
+      <created>1758293509762</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293509762</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial project structure">
+      <created>1758293705943</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293705943</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Initial project structure">
+      <created>1758293740264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293740264</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Initial project structure">
+      <created>1758293967018</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758293967018</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Initial project structure">
+      <created>1758294113560</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758294113560</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,10 +209,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basis of the project" />
     <MESSAGE value="Test" />
-    <MESSAGE value="Initial project structure" />
     <MESSAGE value="testing interface Intelegent IDE" />
     <MESSAGE value="MayHashMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="MayHashMap" />
+    <MESSAGE value="Initial project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial project structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
