@@ -12,53 +12,16 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         threshold = hashTable.length * 0.75f;
     }
 
-    public static void main(String[] args) {
-        MyHashMap<Integer, String> map = new MyHashMap<>();
-        map.insert(17763, "Aleksey");
-        map.insert(226, "Andrey");
-        map.insert(3334, "Vasiliy");
-        map.insert(47745, "Петя");
-        map.insert(5356, "Вася");
-        map.insert(645, "Vasiliy");
-        map.insert(178743, "Гоша");
-        map.insert(7454356, "Роберт");
-        map.insert(93663, "Федор");
-        map.insert(23364, "Миша");
-        map.insert(32364, "Andrey");
-        map.insert(53448, "Гриша");
-        map.insert(12378, "Коля");
-        map.insert(25454, "Марина");
-        map.insert(92887, "Альбина");
-        map.insert(2254, "Василиса ");
-        map.insert(5874, "Анжела");
-        map.insert(5658, "Света");
-        map.insert(156743, "Таня ");
-        map.insert(75676, "Оля");
-        map.insert(998663, "Катя ");
-        map.insert(25683, "Лида ");
-        map.insert(32984, "Люда");
-        map.insert(5348, "Инга");
-        map.insert(5348, "Инга Михайловна");
-
-
-        for (String s : map) {
-            System.out.println(s);
-        }
-
-        System.out.println(map.hashTable.length);
-        System.out.println(map.size);
-    }
 
     @Override
-    public boolean insert(K key, V value) {
+    public boolean put(K key, V value) {
         if (size + 1 >= threshold) {
             threshold *= 2;
             arrayDoubling();
         }
 
         Node<K, V> newNode = new Node<>(key, value);
-        int index = newNode.hash();
-//        int index = (hashTable.length - 1) & newNode.hash(key);
+        int index = (hashTable.length - 1) & newNode.hash();
         if (hashTable[index] == null) {
             return simpleAdd(index, newNode);
         }
@@ -72,9 +35,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         return false;
     }
 
-//    public int getIndex(K key) {
-//        return (hashTable.length - 1) & hash(key);
-//    }
 
     public void arrayDoubling() {
         Node<K, V>[] oldTable = hashTable;
@@ -83,7 +43,7 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         for (Node<K, V> node : oldTable) {
             if (node != null) {
                 for (Node<K, V> n : node.nodes) {
-                    insert(n.key, n.value);
+                    put(n.key, n.value);
                 }
             }
         }
@@ -105,8 +65,7 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
     }
 
     public boolean collisionProcessing(Node<K, V> fromList, Node<K, V> newNode, List<Node<K, V>> nodes) {
-        if (
-                fromList.hashCode() == newNode.hashCode() &&
+        if ( fromList.hashCode() == newNode.hashCode() &&
                         !Objects.equals(fromList.getKey(), newNode.getKey())
                         && !Objects.equals(fromList.getValue(), newNode.getValue())
         ) {
@@ -121,7 +80,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
     @Override
     public boolean remove(K key) {
         int index = hash(key);
-//        int index = getIndex(key);
         if (hashTable[index] == null)
             return false;
 
@@ -139,7 +97,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
     @Override
     public V get(K key) {
         int index = hash(key);
-//        int index = getIndex(key);
         if (index < hashTable.length && hashTable[index] != null) {
             List<Node<K, V>> list = hashTable[index].getNodes();
             for (Node<K, V> node : list) {
@@ -151,10 +108,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         return null;
     }
 
-//    public int hash(K key) {
-//        int h;
-//        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
-//    }
 
     public int hash(K key) {
         int hash = 31;
@@ -162,12 +115,9 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         return hash % hashTable.length;
     }
 
-
-//    @Override
-//
-//    public int size() {
-//        return size;
-//    }
+    public int getSize () {
+        return size;
+    }
 
     @Override
     public Iterator<V> iterator() {
@@ -212,7 +162,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
     private class Node<K, V> {
 
         private List<Node<K, V>> nodes;
-//        private int hash;
         private K key;
         private V value;
 
@@ -231,7 +180,6 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
             return key;
         }
 
-
         public V getValue() {
             return value;
         }
@@ -244,37 +192,22 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
             return hashCode() % hashTable.length;
         }
 
-//        public int hash(K key) {
-//            int h;
-//            return (key == null) ? 0 : (h = hashCode()) ^ (h >>> 16);
-//        }
-
-
-
 
         @Override
         public final int hashCode() {
             int hash = 31;
             hash = hash * 17 + key.hashCode();
             return hash % hashTable.length;
-            //            return Objects.hashCode(key);
         }
-
-
-
-
 
         @Override
         public boolean equals(Object o) {
-//            if (this == o) return true;
-//            if (o instanceof Node) {
-//                Node<K, V> node = (Node) o;
-//                return Objects.equals(key, node.getKey()) && Objects.equals(value, node.getValue())
-//                        || Objects.equals(hash, node.hashCode());
-//
-//            }
+            if (this == o) return true;
+            if (o  != null && getClass() == o.getClass()) {
+                Node<K, V> node = (Node) o;
+                return Objects.equals(key, node.getKey()) && Objects.equals(value, node.getValue());
+            }
             return false;
-
         }
     }
 
