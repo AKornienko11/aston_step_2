@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="Initial project structure">
+    <list default="true" id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="MayHashMap">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aston/modul_1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aston/modul_1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aston/modul_1/MayMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aston/modul_1/MayMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aston/modul_1/MyHashMap.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="32g3qsKvl4ApRFzDiphClVGrCSM" />
   <component name="ProjectViewState">
@@ -72,7 +78,7 @@
       <recent name="aston.modul_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyHashMap">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aston.modul_1.Main" />
       <module name="aston_step_2" />
@@ -101,8 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyHashMap" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MyHashMap" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1758294113560</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MayHashMap">
+      <created>1758294880313</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1758294880313</updated>
+    </task>
+    <task id="LOCAL-00013" summary="MayHashMap">
+      <created>1758376122355</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758376122356</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,9 +230,9 @@
     <MESSAGE value="basis of the project" />
     <MESSAGE value="Test" />
     <MESSAGE value="testing interface Intelegent IDE" />
-    <MESSAGE value="MayHashMap" />
     <MESSAGE value="Initial project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial project structure" />
+    <MESSAGE value="MayHashMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="MayHashMap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
