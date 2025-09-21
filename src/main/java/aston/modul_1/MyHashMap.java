@@ -65,9 +65,9 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
     }
 
     public boolean collisionProcessing(Node<K, V> fromList, Node<K, V> newNode, List<Node<K, V>> nodes) {
-        if ( fromList.hashCode() == newNode.hashCode() &&
-                        !Objects.equals(fromList.getKey(), newNode.getKey())
-                        && !Objects.equals(fromList.getValue(), newNode.getValue())
+        if (fromList.hashCode() == newNode.hashCode() &&
+                !Objects.equals(fromList.getKey(), newNode.getKey())
+                && !Objects.equals(fromList.getValue(), newNode.getValue())
         ) {
             nodes.add(newNode);
             size++;
@@ -78,25 +78,30 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
 
 
     @Override
-    public boolean remove(K key) {
+    public V remove(K key) {
+        V result = null;
         int index = hash(key);
         if (hashTable[index] == null)
-            return false;
+            throw new NoSuchElementException("В коллекции нет сопоставления по указанному ключу ");
 
         List<Node<K, V>> list = hashTable[index].getNodes();
         for (Node<K, V> node : list) {
             if (key.equals(node.getKey())) {
+                result = node.getValue();
                 size--;
-                return list.remove(node);
+                list.remove(node);
             }
         }
-        return false;
+        return result;
     }
 
 
     @Override
     public V get(K key) {
         int index = hash(key);
+        if (hashTable[index] == null)
+            throw new NoSuchElementException("В коллекции нет сопоставления по указанному ключу ");
+
         if (index < hashTable.length && hashTable[index] != null) {
             List<Node<K, V>> list = hashTable[index].getNodes();
             for (Node<K, V> node : list) {
@@ -115,7 +120,7 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         return hash % hashTable.length;
     }
 
-    public int getSize () {
+    public int getSize() {
         return size;
     }
 
@@ -203,7 +208,7 @@ public class MyHashMap<K, V> implements MayMap<K, V> {
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
-            if (o  != null && getClass() == o.getClass()) {
+            if (o != null && getClass() == o.getClass()) {
                 Node<K, V> node = (Node) o;
                 return Objects.equals(key, node.getKey()) && Objects.equals(value, node.getValue());
             }

@@ -1,4 +1,5 @@
 package aston.modul_1;
+
 public class Main {
     public static void main(String[] args) {
         MyHashMap<Integer, String> map = new MyHashMap<>();
@@ -28,9 +29,9 @@ public class Main {
         map.put(5348, "Инга");
         map.put(5348, "Инга Михайловна");
 
-        System.out.println("Количество элементов до  удаления - "  + map.getSize());
+        System.out.println("Количество элементов до  удаления - " + map.getSize());
         map.remove(156743);
-        System.out.println("Количество элементов после удаления - "  + map.getSize());
+        System.out.println("Количество элементов после удаления - " + map.getSize());
 
 
         System.out.println(map.get(998663));
@@ -40,6 +41,8 @@ public class Main {
         for (String s : map) {
             System.out.println(s);
         }
+
+
     }
 }
 
