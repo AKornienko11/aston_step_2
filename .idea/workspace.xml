@@ -4,21 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="Gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+    <list default="true" id="5e594880-b7c1-4031-96f7-82051019cdec" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/dbchangelog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/scripts/liquibase.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/scripts/liquibase_test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/scripts/table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module_2/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module_2/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module_2/dao/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module_2/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module_2/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aston/modul_1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aston/modul_1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aston/modul_1/MayMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aston/modul_1/MayMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aston/modul_1/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aston/modul_1/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/MainApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/dao/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modul_2/users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/checkstyle-result.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,94 +49,176 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
+    <option name="enabledProfiles">
+      <list>
+        <option value="test" />
+        <option value="production" />
+      </list>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="32g3qsKvl4ApRFzDiphClVGrCSM" />
+  <component name="ProjectId" id="33CBeUk4vdmsWkP4QA0NwVVa39J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="compactDirectories" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="showScratchesAndConsoles" value="false" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
-
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "Application.MainApp.executor": "Run",
+    "Maven.aston_step_2 [clean].executor": "Run",
+    "Maven.aston_step_2 [org.liquibase:liquibase-maven-plugin:4.15.0:update].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projects/aston_step_2/src",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "build.tools"
   }
 }]]></component>
-
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\aston_step_2\src" />
+      <recent name="C:\projects\aston_step_2" />
+      <recent name="C:\projects\aston_step_2\src\main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.module_2.MainApp">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modul_2.MainApp" />
+      <module name="aston_step_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modul_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="modul_2.MainApp" />
+      <module name="aston_step_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modul_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="module_2.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="module_2.MainApp" />
+      <module name="aston_step_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="module_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in aston_step_2" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="aston_step_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="resources in aston_step_2" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="aston_step_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/resources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src in aston_step_2" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="aston_step_2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.module_2.MainApp" />
+        <item itemvalue="Application.module_2.MainApp" />
+        <item itemvalue="Application.MainApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b9c4385b-4db8-4193-a47f-0d95722cfbaf" name="Changes" comment="" />
-      <created>1757828582370</created>
+      <changelist id="5e594880-b7c1-4031-96f7-82051019cdec" name="Changes" comment="" />
+      <created>1758747787890</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1757828582370</updated>
+      <updated>1758747787890</updated>
     </task>
-    <task id="LOCAL-00001" summary="Test">
-      <created>1757831391875</created>
+    <task id="LOCAL-00001" summary="test">
+      <option name="closed" value="true" />
+      <created>1758797236897</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1757831391875</updated>
+      <updated>1758797236897</updated>
     </task>
-    <task id="LOCAL-00002" summary="Initial project structure">
-      <created>1757846695828</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1757846695828</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Initial project structure">
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="basis of the project" />
-    <MESSAGE value="Test" />
-    <MESSAGE value="testing interface Intelegent IDE" />
-    <MESSAGE value="Initial project structure" />
-
-    <MESSAGE value="Gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gitignore" />
-
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="ru.job4j.collection.ForwardLinked$Node" memberName="item" />
+        <PinnedItemInfo parentTag="ru.job4j.collection.ForwardLinked$Node" memberName="next" />
+        <PinnedItemInfo parentTag="ru.job4j.io.Config" memberName="path" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/job4j_design$ScannerEx.ic" NAME="ScannerEx Coverage Results" MODIFIED="1749541481339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.job4j.ioio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/job4j_design$User.ic" NAME="User Coverage Results" MODIFIED="1715106517738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.job4j.map.*</FILTER>
+    </SUITE>
   </component>
 </project>
