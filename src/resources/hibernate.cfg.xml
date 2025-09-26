@@ -13,6 +13,6 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
 
-        <mapping class="modul_2/entity/User"/>
+        <mapping class="module_2.entity.User"/>
     </session-factory>
 </hibernate-configuration>
