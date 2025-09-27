@@ -8,11 +8,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(nullable = false)
+    @Column(name =  "name", nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(name =  "email", nullable = false)
     private String email;
-    @Column(nullable = false)
+    @Column(name =  "age", nullable = false)
     private int age;
     private LocalDateTime created_at;
 

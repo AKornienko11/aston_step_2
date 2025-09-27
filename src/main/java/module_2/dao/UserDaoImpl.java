@@ -1,23 +1,19 @@
 package module_2.dao;
 
 
+import module_2.HibernateConfiguration;
 import module_2.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
-
-    private final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-            .configure().build();
-    private final SessionFactory sf = new MetadataSources(registry)
-            .buildMetadata().buildSessionFactory();
+    HibernateConfiguration hibernateConfiguration = new HibernateConfiguration();
+    SessionFactory sf = hibernateConfiguration.sessionFactory();
 
     public UserDaoImpl() {
     }
@@ -27,7 +23,7 @@ public class UserDaoImpl implements UserDao {
         Session session = sf.openSession();
         try {
             session.beginTransaction();
-            session.save(user);
+            session.persist(user);
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
@@ -43,9 +39,13 @@ public class UserDaoImpl implements UserDao {
         Session session = sf.openSession();
         try {
             session.beginTransaction();
-            rsl = session.createQuery("FROM User WHERE id = :fId", User.class)
-                    .setParameter("fId", id)
+            rsl = session.createQuery("Select s FROM User s WHERE s.id = :id", User.class)
+                    .setParameter("id", id)
                     .getSingleResult();
+            /* или так */
+//            rsl = session.get(User.class, id);
+
+            session.beginTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
         } finally {
@@ -61,13 +61,22 @@ public class UserDaoImpl implements UserDao {
         try {
             session.beginTransaction();
             Query query = session.createQuery(
-                            "UPDATE User SET name = :fName, email = :fEmail, age = :fAge"
-                                    + " WHERE id = :fId")
-                    .setParameter("fName", user.getName())
-                    .setParameter("fEmail", user.getEmail())
-                    .setParameter("fAge", user.getAge())
-                    .setParameter("fId", user.getId());
+                            "UPDATE User s SET name.s = :name, s.email = email, s.age = Age"
+                                    + " WHERE s.id = id")
+                    .setParameter("name", user.getName())
+                    .setParameter("email", user.getEmail())
+                    .setParameter("age", user.getAge())
+                    .setParameter("id", user.getId());
             rsl = query.executeUpdate() > 0;
+
+            /* Так тоже работает */
+
+//            User updateUser = session.get(User.class, user.getId());
+//            updateUser.setName(user.getName());
+//            updateUser.setEmail(user.getEmail());
+//            updateUser.setAge(user.getAge());
+//            rsl = true;
+
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
@@ -84,8 +93,8 @@ public class UserDaoImpl implements UserDao {
         try {
             session.beginTransaction();
             Query query = session.createQuery(
-                            "DELETE User WHERE id = :fId")
-                    .setParameter("fId", id);
+                            "Delete from User s where s.id = id")
+                    .setParameter("id", id);
             rsl = query.executeUpdate() > 0;
             session.getTransaction().commit();
         } catch (Exception e) {
