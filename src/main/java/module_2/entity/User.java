@@ -2,24 +2,25 @@ package module_2.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name =  "name", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column(name =  "email", nullable = false)
+    @Column(name = "email", nullable = false)
     private String email;
-    @Column(name =  "age", nullable = false)
+    @Column(name = "age", nullable = false)
     private int age;
     private LocalDateTime created_at;
 
     public User() {
     }
 
-    public User(String name, String email, int age ) {
+    public User(String name, String email, int age) {
         this.name = name;
         this.email = email;
         this.age = age;
@@ -75,5 +76,6 @@ public class User {
                 ", age=" + age +
                 ", created_at=" + created_at +
                 '}';
+
     }
 }

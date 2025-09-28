@@ -33,6 +33,5 @@ public class UserService {
     public List<User> listUsers() {
         return userDao.findAll();
     }
-
 }
 

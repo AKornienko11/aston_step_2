@@ -1,19 +1,22 @@
 package module_2.dao;
 
-
-import module_2.HibernateConfiguration;
 import module_2.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
-    HibernateConfiguration hibernateConfiguration = new HibernateConfiguration();
-    SessionFactory sf = hibernateConfiguration.sessionFactory();
+
+    private final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+            .configure().build();
+    private final SessionFactory sf = new MetadataSources(registry)
+            .buildMetadata().buildSessionFactory();
 
     public UserDaoImpl() {
     }
@@ -39,12 +42,7 @@ public class UserDaoImpl implements UserDao {
         Session session = sf.openSession();
         try {
             session.beginTransaction();
-            rsl = session.createQuery("Select s FROM User s WHERE s.id = :id", User.class)
-                    .setParameter("id", id)
-                    .getSingleResult();
-            /* или так */
-//            rsl = session.get(User.class, id);
-
+            rsl = session.get(User.class, id);
             session.beginTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
@@ -60,23 +58,8 @@ public class UserDaoImpl implements UserDao {
         boolean rsl = false;
         try {
             session.beginTransaction();
-            Query query = session.createQuery(
-                            "UPDATE User s SET name.s = :name, s.email = email, s.age = Age"
-                                    + " WHERE s.id = id")
-                    .setParameter("name", user.getName())
-                    .setParameter("email", user.getEmail())
-                    .setParameter("age", user.getAge())
-                    .setParameter("id", user.getId());
-            rsl = query.executeUpdate() > 0;
-
-            /* Так тоже работает */
-
-//            User updateUser = session.get(User.class, user.getId());
-//            updateUser.setName(user.getName());
-//            updateUser.setEmail(user.getEmail());
-//            updateUser.setAge(user.getAge());
-//            rsl = true;
-
+            session.merge(user);
+            rsl = true;
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
@@ -92,10 +75,10 @@ public class UserDaoImpl implements UserDao {
         boolean rsl = false;
         try {
             session.beginTransaction();
-            Query query = session.createQuery(
-                            "Delete from User s where s.id = id")
-                    .setParameter("id", id);
-            rsl = query.executeUpdate() > 0;
+            User userToDelete = session.load(User.class, id);
+            if (userToDelete != null) {
+                session.delete(userToDelete);
+            }
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();
