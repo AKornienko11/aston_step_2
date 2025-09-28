@@ -70,6 +70,7 @@ public class MainApp {
         } else {
             System.out.println("Пользователь не найден.");
         }
+
     }
 
     private static void updateUser(Scanner scanner, UserService userService) {

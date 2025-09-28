@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/users</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Users</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">password</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -15,4 +15,5 @@
 
         <mapping class="module_2.entity.User"/>
     </session-factory>
+
 </hibernate-configuration>

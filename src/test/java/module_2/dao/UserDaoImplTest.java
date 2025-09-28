@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoImplTest {
     private UserDaoImpl service;
 
-
     @BeforeEach
     void setup() {
         service = new UserDaoImpl();
